@@ -1,1 +1,6 @@
-site_name: My Docs
+site_name: Luna
+#site_url: https://<username>.github.io/<repo-name>/
+theme:
+  name: material
+nav:
+  - Home: index.md
