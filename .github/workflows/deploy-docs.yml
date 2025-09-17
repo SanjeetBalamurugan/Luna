@@ -27,4 +27,4 @@ jobs:
 
       - name: Build and Deploy
         run: |
-          mkdocs gh-deploy --force
+          PYTHONPATH=src mkdocs gh-deploy --force
