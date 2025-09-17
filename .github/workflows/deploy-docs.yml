@@ -21,10 +21,16 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+          installer-parallel: true
+
       - name: Install dependencies
-        run: |
-          pip install mkdocs mkdocs-material mkdocstrings[python]
+        run: poetry install --no-interaction --no-root
 
       - name: Build and Deploy
         run: |
-          PYTHONPATH=src mkdocs gh-deploy --force
+          PYTHONPATH=src poetry run mkdocs gh-deploy --force
