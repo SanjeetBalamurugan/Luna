@@ -2,5 +2,17 @@ site_name: Luna
 #site_url: https://<username>.github.io/<repo-name>/
 theme:
   name: material
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google   # or "numpy" if you prefer
+            show_source: true
+
 nav:
   - Home: index.md
+  - API Reference: api.md
+
