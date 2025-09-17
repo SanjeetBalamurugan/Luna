@@ -10,6 +10,7 @@ plugins:
         - docs/gen_api.py
   - literate-nav
   - section-index
+  - autorefs
   - mkdocstrings:
       handlers:
         python:
