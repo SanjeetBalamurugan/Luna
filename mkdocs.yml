@@ -2,6 +2,17 @@ site_name: Luna
 site_url: https://sanjeetbalamurugan.github.io/Luna
 theme:
   name: material
+  palette:
+    - scheme: default
+      primary: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
 
 plugins:
   - search
