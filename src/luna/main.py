@@ -1,7 +1,5 @@
 """
 main.py
-
-Entry point for the Raspberry Pi project.
 """
 
 from luna.hello import hello_world
