@@ -1,17 +1,21 @@
-# Welcome to MkDocs
+# Welcome to Luna
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Welcome to the official documentation for the **Luna** project.
 
-## Commands
+For a full API reference, please visit the [API Reference](reference/index.md) section.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Quick Start
 
-## Project layout
+Here's a quick example to get you started:
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+```python
+from luna.led_controller import LEDController
+import time
+
+led = LEDController(pin=9)
+
+try:
+    print("Blinking the LED...")
+    led.blink(times=5, delay=1)
+finally:
+    led.cleanup()
