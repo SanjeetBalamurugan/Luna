@@ -28,6 +28,10 @@ jobs:
           virtualenvs-in-project: true
           installer-parallel: true
 
+      - name: Ensure lock file is up to date
+        run: |
+          poetry lock --no-update
+
       - name: Install dependencies
         run: poetry install --no-interaction --no-root
 
