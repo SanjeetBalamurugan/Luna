@@ -21,7 +21,7 @@ for path in src_dir.rglob("*.py"):
     full_module_name = ".".join(module_path.parts)
     
     link_text = f"**`{full_module_name}`**"
-    link_url = f"{doc_path.name}"
+    link_url = doc_path.relative_to(docs_dir)
     module_links.append(f"- [{link_text}]({link_url})")
 
     with mkdocs_gen_files.open(doc_path, "w") as f:
