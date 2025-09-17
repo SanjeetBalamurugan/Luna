@@ -23,6 +23,20 @@ class LEDController:
                 Defaults to 5.
             delay (int, optional): The delay in seconds between blinks.
                 Defaults to 1.
+        
+        Example:
+            ```python
+            from luna.led_controller import LEDController
+            import time
+
+            # Create an instance of the LEDController
+            led = LEDController(pin=18)
+            
+            # Blink the LED 5 times with a 1-second delay
+            led.blink(times=5, delay=1)
+            
+            # Note: A real-world application would use a try...finally block for cleanup
+            ```
         """
         for _ in range(times):
             GPIO.output(self.pin, GPIO.HIGH)
@@ -35,5 +49,19 @@ class LEDController:
 
         This should be called at the end of the script to release the
         GPIO pin and prevent potential errors in future programs.
+        
+        Example:
+            ```python
+            from luna.led_controller import LEDController
+
+            led = LEDController(pin=18)
+            
+            try:
+                # Run some code that uses the LED
+                led.blink(times=2)
+            finally:
+                # Always clean up the GPIO settings
+                led.cleanup()
+            ```
         """
         GPIO.cleanup()
