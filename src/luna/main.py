@@ -5,7 +5,7 @@ Entry point for the Raspberry Pi project.
 """
 
 from luna.hello import hello_world
-from luna.led_control import LEDController
+from luna.led_controller import LEDController
 
 def main():
     """Main function that runs the project."""
